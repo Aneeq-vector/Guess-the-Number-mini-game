@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guess the Number</title>
     <link rel="icon" href="speech-bubble.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -43,6 +47,60 @@
             font-size: 18px;
             margin: 10px 0;
         }
+
+        /* footer */
+
+        footer{
+            text-align: center;
+            margin-top: 50px;
+            background-color: none;
+            font-family: 'Poppins', sans-serif;
+        }
+        footer p{
+            margin: 0;
+        }
+
+        /*Social media icons */
+
+        .socialicons img{
+            width: 25px;
+            height: 25px;
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            transition: opacity 0.3s ease-in-out, transform 0.2s ease-in-out;
+        }
+
+        .socialicons a{
+            display: inline-flex;
+            padding-right: 10px;
+            padding-right: 10px;
+        }
+        
+        .socialicons a img{
+            transition: filter 0.3s ease-in-out;
+            filter: invert();
+        }
+
+        /* Facebook - Change to blue on hover */
+        .socialicons a.facebook:hover img {
+            filter: invert(30%) sepia(100%) saturate(300%) hue-rotate(220deg);
+        }
+
+        /* Instagram - Change to pink on hover */
+        .socialicons a.instagram:hover img {
+            filter: invert(40%) sepia(80%) saturate(500%) hue-rotate(310deg);
+        }
+
+        /* LinkedIn - Change to cyan on hover */
+        .socialicons a.linkedin:hover img {
+            filter: invert(30%) sepia(90%) saturate(400%) hue-rotate(180deg);
+        }
+
+        /* GitHub - Change to purple on hover */
+        .socialicons a.github:hover img {
+            filter: invert(25%) sepia(70%) saturate(500%) hue-rotate(270deg);
+    }
     </style>
 </head>
 <body>
@@ -53,6 +111,25 @@
         <p id="result">You are Wrong/Right</p>
         <p id="score">Score: 10</p>
     </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>Made By <strong>Ahmed Aneeq</strong></p>
+        <div class="socialicons">
+            <a href="https://web.facebook.com/ahmedaneeqfb/" class="facebook">
+                <img src="Elements/facebook-icon.png" id="facebook-icon">
+            </a>
+            <a href="https://www.instagram.com/mr_xnee/" class="instagram">
+                <img src="Elements/instagram-icon.png" id="instagram-icon">
+            </a>
+            <a href="https://www.linkedin.com/in/ahmed-aneeq-b8b073325/" class="linkedin">
+                <img src="Elements/linkedin-icon.png" id="linkedin-icon">
+            </a>
+            <a href="https://github.com/Aneeq-vector" class="github">
+                <img src="Elements/github-icon.png" id="github-icon">
+            </a>
+        </div>
+     </footer>
 
     <script>
         var guessnumber = document.getElementById("guessnumber");
